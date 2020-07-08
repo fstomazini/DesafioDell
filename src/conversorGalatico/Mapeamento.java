@@ -7,9 +7,7 @@ package conversorGalatico;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+
 
 
 public class Mapeamento {
@@ -17,7 +15,7 @@ public class Mapeamento {
 	public static void main(String args[]) {
 
 		Tradutor tradutor = new Tradutor();
-		String path = "C:\\Users\\felip\\IdeaProjects\\Desafio Dell\\src\\conversorGalatico/teste.txt"; //path do arquivo
+		String path = "C:\\Users\\felip\\IdeaProjects\\DesafioDell\\src\\conversorGalatico"; //path do arquivo
 		BufferedReader br = null;
 		FileReader fr = null;
 		try {
