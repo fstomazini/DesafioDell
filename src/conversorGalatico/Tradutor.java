@@ -13,7 +13,7 @@ public class Tradutor {
 
 		try {
 
-			if (frase.contains("Credits")) {
+			if (frase.contains("valem")) {
 				mapeamentoProduto(frase);
 				return null;
 			} else if (frase.contains("quanto vale ")) {
@@ -23,7 +23,7 @@ public class Tradutor {
 				for (String s : array) {
 					mensagem = mensagem.concat(s + " ");
 				}
-				return mensagem + "is " + valor.toString();
+				return mensagem + "vale " + valor.toString();
 
 			} else if (frase.contains("quantos créditos"))
 
@@ -34,26 +34,26 @@ public class Tradutor {
 				for (String s : array) {
 					mensagem = mensagem.concat(s + " ");
 				}
-				return mensagem + "is " + valor.toString() + " Credits";
-			} else if ((frase.split(" ").length == 3) && frase.contains(" is ")) {
+				return mensagem + "custa " + valor.toString() + " créditos";
+			} else if ((frase.split(" ").length == 3) && frase.contains(" representa ")) {
 				mapeamentoValor(frase);
 				return null;
 			} else {
-				return "I have no idea what you are talking about";
+				return "Nem ideia do que isto significa!";
 			}
 		} catch (RuntimeException e) { // numero invalidos por qualquer motivo (XXXX , XIC, etc) são tratados como entrada invalida
-			return "I have no idea what you are talking about";
+			return "Nem ideia do que isto significa!";
 		}
 	}
 
 	private void mapeamentoValor(String frase) { // Armazena o Simbolo do algarismo Galatico e seu valor em algaritimos arabicos
 
-		String[] array = frase.split(" is ");
+		String[] array = frase.split(" representa ");
 		valores.put(array[0], conversor(array[1]));
 
 	}
 
-	private int conversor(String palavra) { //Converte Valor em algarismo romano em algarismos arabicos
+	private int conversor(String palavra) { //Converte Valor em algarismo romano em algarismos arabicos //ok
 		int valor = 0;
 		switch (palavra) {
 		case "I":
@@ -83,7 +83,7 @@ public class Tradutor {
 
 	}
 
-	private Double somador(List<Integer> valores) { //  funcção responsavel por Somar dois numeros em Algarismos romanos
+	private Double somador(List<Integer> valores) { //  funcção responsavel por Somar dois numeros em Algarismos romanos //ok
 		Double soma = 0.0;
 		int contadorRepeticao = 1;
 		for (int i = 0; i < valores.size(); i++) {
@@ -115,8 +115,8 @@ public class Tradutor {
 
 	private void mapeamentoProduto(String frase) { // Responsavel por armazenar os nomes dos metais vendidos e seus respectivos valores
 
-		String[] array = frase.split(" is ");
-		int credito = Integer.parseInt(array[1].replace(" Credits", ""));
+		String[] array = frase.split(" valem ");
+		int credito = Integer.parseInt(array[1].replace(" créditos", ""));
 		String[] nomes = array[0].split(" ");
 		String metal = nomes[nomes.length - 1];
 		List<Integer> pesos = new ArrayList<>();
