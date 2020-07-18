@@ -27,7 +27,7 @@ public class Calculadora {
 
     }
 
-    public Double somador(List<Integer> valores) { //  funcção responsavel por Somar dois numeros em Algarismos romanos //ok
+    public Double somador(List<Integer> valores) { //  funcção responsavel por Somar dois numeros em Algarismos romanos
         Double soma = 0.0;
         int contadorRepeticao = 1;
         for (int i = 0; i < valores.size(); i++) {

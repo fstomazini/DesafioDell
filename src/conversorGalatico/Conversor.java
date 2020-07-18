@@ -2,7 +2,7 @@ package conversorGalatico;
 
 public class Conversor {
 
-    public static int conversor(String palavra) { //Converte Valor em algarismo romano em algarismos arabicos //ok
+    public static int conversor(String palavra) { //Converte Valor em algarismo romano em algarismos arabicos
         int valor = 0;
         switch (palavra) {
             case "I":
