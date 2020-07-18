@@ -10,7 +10,7 @@ import java.io.IOException;
 
 
 
-public class Mapeamento {
+public class main {
 
 	public static void main(String args[]) {
 
