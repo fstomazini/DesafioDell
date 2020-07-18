@@ -1,9 +1,10 @@
-package conversorGalatico;
+package entities;
+
+import conversorGalatico.Util.Calculadora;
+import conversorGalatico.Util.Mapeamento;
 
 import java.util.Map;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 public class Tradutor {
 	private Map<String, Integer> valores = new HashMap<>(); //Armazena os Simbolos e valores usados nas transações galaticas

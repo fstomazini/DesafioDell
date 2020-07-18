@@ -1,4 +1,7 @@
-package conversorGalatico;
+package conversorGalatico.Util;
+
+import conversorGalatico.Util.Calculadora;
+import conversorGalatico.Util.Conversor;
 
 import java.util.ArrayList;
 import java.util.List;

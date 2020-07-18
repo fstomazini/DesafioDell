@@ -1,4 +1,4 @@
-package conversorGalatico;
+package conversorGalatico.Util;
 
 public class Conversor {
 
