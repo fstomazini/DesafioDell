@@ -1,4 +1,4 @@
-package conversorGalatico.Util;
+package Util;
 
 import java.util.ArrayList;
 import java.util.List;

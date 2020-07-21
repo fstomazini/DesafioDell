@@ -18,11 +18,9 @@ public class main {
 
 		Tradutor tradutor = new Tradutor();
 		String path = "C:\\Users\\felip\\IdeaProjects\\DesafioDell\\src\\conversorGalatico\\teste2.txt"; //path do arquivo
-		BufferedReader br = null;
-		FileReader fr = null;
-		try {
-			fr = new FileReader(path);
-			br = new BufferedReader(fr);
+
+		try(BufferedReader br = new BufferedReader(new FileReader(path))) {
+
 			String line ="";
 			do{
 				String mensagem = "";
@@ -38,15 +36,6 @@ public class main {
 			}while (line != null);
 		} catch (IOException e) {
 			System.out.println("Error: " + e.getMessage());
-		} finally {
-			try {
-				if (br != null)
-					br.close();
-				if (fr != null)
-					fr.close();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
 		}
 	}
 }

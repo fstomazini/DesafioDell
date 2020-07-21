@@ -1,7 +1,7 @@
 package entities;
 
-import conversorGalatico.Util.Calculadora;
-import conversorGalatico.Util.Mapeamento;
+import Util.Calculadora;
+import Util.Mapeamento;
 
 import java.util.Map;
 import java.util.HashMap;
